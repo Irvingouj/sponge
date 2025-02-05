@@ -18,7 +18,7 @@ export default function Project({
   title_zh,
   tags,
   imageUrl,
-  projectUrl,
+  //projectUrl,
   demoUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null)
@@ -39,10 +39,10 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[45rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[28rem]  transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 ">
+      <section className="bg-[#e8eaea] max-w-[45rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[28rem]  transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 ">
         <div className="group pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col items-start gap-3 h-full sm:group-even:ml-[18rem]">
           <div className="flex flex-col gap-3 items-start ">
-            <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
+            <h3 className="text-2xl font-semibold group-hover:text-[#e9882a] dark:group-hover:text-yellow hover:underline">
               <Link href={demoUrl} target="_blank">
                 {activeLocale === "zh" ? title_zh : title}
               </Link>
@@ -50,22 +50,13 @@ export default function Project({
 
             <div className="flex gap-3 text-sm text-gray-500 dark:text-gray-300">
               {" "}
-              <Link
-                href={projectUrl}
-                target="_blank"
-                className="w-full flex items-center gap-1  hover:underline underline-offset-2"
-              >
-                <span className="break-keep">Code</span>
-
-                <FaGithubSquare className="w-5 h-5" />
-              </Link>
               {demoUrl && (
                 <Link
                   href={demoUrl}
                   target="_blank"
                   className=" w-full flex items-center gap-1 hover:underline underline-offset-2"
                 >
-                  <span className="break-keep min-w-[4.5rem]">Live demo</span>
+                  <span className="break-keep min-w-[4.5rem]">Related Link</span>
                   <FiExternalLink className="w-5 h-5 " />
                 </Link>
               )}
@@ -90,8 +81,8 @@ export default function Project({
         <Image
           src={imageUrl}
           alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+          quality={100}
+          className="absolute hidden sm:block top-8 -right-24 w-[28.25rem] rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3
@@ -102,7 +93,7 @@ export default function Project({
         group-even:group-hover:translate-y-3
         group-even:group-hover:rotate-2
 
-        group-even:right-[initial] group-even:-left-40"
+        group-even:right-[initial] group-even:-left-32"
         />
       </section>
     </motion.div>

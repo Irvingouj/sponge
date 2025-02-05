@@ -2,9 +2,10 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { BsArrowRight, BsLinkedin } from "react-icons/bs"
-import { HiDownload } from "react-icons/hi"
-import { FaGithubSquare } from "react-icons/fa"
+import { BsArrowRight, BsLinkedin,  BsMusicNoteBeamed,  } from "react-icons/bs"
+import { HiDownload,  } from "react-icons/hi"
+import { FaGithubSquare,  } from "react-icons/fa"
+import { FaBilibili } from "react-icons/fa6";
 import Link from "next/link"
 import { Source_Code_Pro } from "next/font/google"
 import { useLocale } from "next-intl"
@@ -67,7 +68,7 @@ export default function Intro() {
         </div>
       </div>
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl flex flex-col items-center justify-center"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -96,9 +97,11 @@ export default function Intro() {
             >
               <TypeAnimation
                 sequence={[
-                  "Frontend Developer",
+                  "Super Individual",
                   1000,
                   "Full Stack Developer",
+                  1000,
+                  "Digital Nomad",
                   1000,
                 ]}
                 wrapper="span"
@@ -112,7 +115,7 @@ export default function Intro() {
         {activeLocale === "en" && (
           <p>
             My focus is{" "}
-            <span className="italic font-bold">React (Next.js)</span>.
+            <span className="italic font-bold">Innovation (AI)</span>.
           </p>
         )}
       </motion.h1>
@@ -142,8 +145,8 @@ export default function Intro() {
           className="bg-white py-2 px-3 text-sm text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href={
             activeLocale == "en"
-              ? "/joy-fullstack-resume.pdf"
-              : "/前端开发-彭郁洁.pdf"
+              ? "/en-resume.pdf"
+              : "/zh-简历.pdf"
           }
           locale={false}
         >
@@ -151,23 +154,29 @@ export default function Intro() {
           <HiDownload />
         </Link>
         <a
-          className="bg-white p-3 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/joy-yujiepeng/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
           className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/Codefreyy"
+          href="https://github.com/spongeYuqi"
           target="_blank"
         >
           <FaGithubSquare />
         </a>
         <a
+          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://music.163.com/#/user/home?id=7816209974"
+          target="_blank"
+        >
+          <BsMusicNoteBeamed />
+        </a>
+        <a
+          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://space.bilibili.com/1994639130?spm_id_from=333.1007.0.0"
+          target="_blank"
+        >
+          <FaBilibili />
+        </a>
+        <a
           className=" bg-white py-2 px-3 text-sm text-gray-700 flex items-center gap-2  rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://blog-joy-peng.netlify.app"
+          href="https://spongebob.vip"
           target="_blank"
         >
           {t("blog")}
