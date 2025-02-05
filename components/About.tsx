@@ -67,7 +67,7 @@ export default function About() {
            <span className="font-medium italic"> AI, programming </span> 
            and 
            <span className="font-medium italic"> development</span>. 
-           💻In addition, I also cherish the dream of realizing self-value through the creation of we-media. Even though I haven't officially entered the work force yet, I'm already trying out different roles to enrich my experience💪. From my previous love of drawing to my current passion for technological exploration, I find my interests are constantly expanding. Facing the future of graduation, I am trying to find my own way, and I am willing to try all new things.
+           💻In addition, I also cherish the dream of realizing self-value through the creation of we-media. Even though I haven&apos;t officially entered the work force yet, I&apos;m already trying out different roles to enrich my experience💪. From my previous love of drawing to my current passion for technological exploration, I find my interests are constantly expanding. Facing the future of graduation, I am trying to find my own way, and I am willing to try all new things.
           </p>
 
           <p className="mb-3">
