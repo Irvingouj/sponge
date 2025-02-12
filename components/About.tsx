@@ -61,7 +61,7 @@ export default function About() {
       ) : (
         <>
           <p className="mb-3">
-          <span className="text-xl md:text-2xl font-bold italic underline">Hello everyone!</span> <span className="text-xl md:text-2xl font-bold">😘</span>I am a passionate person who loves learning and exploration. Now I am an undergraduate majoring in
+          <span className="text-xl md:text-2xl font-bold italic underline">Hello !</span> <span className="text-xl md:text-2xl font-bold">😘</span>I am a passionate person who loves learning and exploration. Now I am an undergraduate majoring in
            <span className="font-medium italic"> electrical engineering</span> <span className="text-xl md:text-2xl font-bold">😰</span>.
            Although my professional background is more traditional engineering📟, I have a strong interest in emerging technology fields, especially 
            <span className="font-medium italic"> AI, programming </span> 
