@@ -4,7 +4,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { BsArrowRight, BsLinkedin,  BsMusicNoteBeamed,  } from "react-icons/bs"
 import { HiDownload,  } from "react-icons/hi"
-import { FaGithubSquare, FaEnvelope  } from "react-icons/fa"
+import { FaGithubSquare, FaEnvelope, FaFileWord } from "react-icons/fa"
 import { FaBilibili } from "react-icons/fa6";
 import Link from "next/link"
 import { Source_Code_Pro } from "next/font/google"
@@ -181,6 +181,14 @@ export default function Intro() {
         >
           <FaEnvelope />
         </a>
+        <Link
+          
+          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="/部署教程.docx"
+          download
+        >
+          <FaFileWord />
+        </Link>
         <a
           className=" bg-white py-2 px-3 text-sm text-gray-700 flex items-center gap-2  rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://spongebob.vip"
