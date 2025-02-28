@@ -7,6 +7,6 @@ export function ExperienceLabel() {
 			className="absolute top-96  mt-28 scroll-mt-[600px] w-10 h-[300px] bg-transparent"
 			id="experience"
 			ref={ref}
-		></section>
+		/>
 	);
 }

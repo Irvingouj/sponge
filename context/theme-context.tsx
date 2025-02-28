@@ -44,11 +44,10 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProp) => {
 				document.documentElement.classList.remove("dark");
 			}
 		} else {
-			// 如果没有本地存储的主题设置，则默认使用亮色主题
 			setTheme("light");
 			document.documentElement.classList.remove("dark");
 		}
-	}, []); // 空数组，确保只在组件挂载时执行一次
+	}, []);
 
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>

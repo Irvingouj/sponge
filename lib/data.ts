@@ -5,8 +5,8 @@ import draws from "@/public/draws.jpg";
 import tank from "@/public/tank.png";
 import xb2 from "@/public/xb2-node.jpg";
 import React from "react";
-import { FaGithub, FaGlobe, FaReact, FaVuejs, FaWeixin } from "react-icons/fa";
-import { LuGlobe2, LuGraduationCap, LuMusic } from "react-icons/lu";
+import { FaGithub, FaGlobe, FaWeixin } from "react-icons/fa";
+import { LuMusic } from "react-icons/lu";
 
 export const links = [
 	{
@@ -29,10 +29,6 @@ export const links = [
 		name: "Experiences",
 		hash: "#experience",
 	},
-	// {
-	//     name: "Contact",
-	//     hash: "#contact",
-	// },
 ] as const;
 
 export const headerLanguageMap = {
@@ -54,14 +50,6 @@ export const experiencesData = [
 	},
 	{
 		title: "Personal wechat public account creation and operation",
-		// location: React.createElement("span", {},
-		//     React.createElement("a", {
-		//         href: "https://www.nio.com/",
-		//         style: { textDecoration: 'underline' },
-		//         target: "_blank"
-		//     }, "NIO Inc."),
-		//     " Wuhan, China"
-		// ),
 		location: "JieNitang",
 		description:
 			"When the website was being built, I opened the growth footprint of my wechat public account, and it showed that I had only published three articles since I registered it on October 5th. The last article was on October 8th, and I had not published any more since then. Due to my studies and various miscellaneous trifles, I did not develop the habit of constantly updating my public account. I hope I can take this private traffic platform and help myself become a super individual!",
@@ -98,7 +86,8 @@ export const experiencesDataZn = [
 	{
 		title: "个人微信公众号创建运营",
 		location: "芥泥糖",
-		description: `在网站搭建之时，我翻开我的微信公众号的成长足迹，显示从10月5日注册的公众号，只发表了3次文章，最后一次文章是在10月8日，之后就再也没发表过了，因为学业以及各种乱七八糟的琐事，使我没有养成这个习惯去不断地更新我的公众号，希望自己能够好好把我这个私域流量平台，助力自己成为超级个体！`,
+		description:
+			"在网站搭建之时，我翻开我的微信公众号的成长足迹，显示从10月5日注册的公众号，只发表了3次文章，最后一次文章是在10月8日，之后就再也没发表过了，因为学业以及各种乱七八糟的琐事，使我没有养成这个习惯去不断地更新我的公众号，希望自己能够好好把我这个私域流量平台，助力自己成为超级个体！",
 		icon: React.createElement(FaWeixin),
 		date: "2024年10月 - 在路上",
 	},

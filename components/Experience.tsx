@@ -33,7 +33,7 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
 	const activeLocale = useLocale();
 
 	const experienceDataShown =
-		activeLocale == "zh" ? experiencesDataZn : experiencesData;
+		activeLocale === "zh" ? experiencesDataZn : experiencesData;
 
 	return (
 		<section className="sm:mb-40 relative mb-20">
@@ -41,14 +41,14 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
 			<SectionHeading>
 				{" "}
 				{activeLocale === "zh"
-					? headerLanguageMap["Experiences"]
+					? headerLanguageMap.Experiences
 					: "My Experiences"}
 			</SectionHeading>
 			{!isMobile ? (
-				<VerticalTimeline lineColor={theme == "light" ? "#e9e9ea" : "#3b3d4f"}>
+				<VerticalTimeline lineColor={theme === "light" ? "#e9e9ea" : "#3b3d4f"}>
 					{experienceDataShown.map((item, index) => (
 						<motion.div
-							key={index}
+							key={item.title}
 							initial="hidden"
 							whileInView="visible"
 							viewport={{ once: true, amount: 0.5 }}
@@ -73,7 +73,7 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
 											: "0.4rem solid rgba(255, 255, 255, 0.5)",
 								}}
 								date={item.date}
-								icon={<>{item.icon}</>}
+								icon={item.icon}
 								iconStyle={{
 									background:
 										theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
@@ -93,8 +93,10 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
 				<div className="flex flex-col gap-6">
 					{experienceDataShown.map((item, index) => (
 						<div
-							key={index}
-							className={`flex dark:bg-slate-800 dark:text-slate-100 bg-slate-100 border-1 border-opacity-80 rounded-lg p-6 pb-8 flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8 `}
+							key={item.title}
+							className={
+								"flex dark:bg-slate-800 dark:text-slate-100 bg-slate-100 border-1 border-opacity-80 rounded-lg p-6 pb-8 flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8 "
+							}
 						>
 							<div className="w-10 h-5 sm:w-24 sm:h-24 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
 								{item.icon}
