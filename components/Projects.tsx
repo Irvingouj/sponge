@@ -1,41 +1,41 @@
-"use client"
+"use client";
 
-import React from "react"
-import { headerLanguageMap, projectsData } from "@/lib/data"
-import { useSectionInView } from "@/lib/hooks"
-import SectionHeading from "./SectionHeading"
-import Project from "./Project"
-import { useLocale } from "next-intl"
-import Link from "next/link"
-import { FaAngleRight } from "react-icons/fa6"
+import { headerLanguageMap, projectsData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
+import { useLocale } from "next-intl";
+import Link from "next/link";
+import React from "react";
+import { FaAngleRight } from "react-icons/fa6";
+import Project from "./Project";
+import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.1)
-  const activeLocale = useLocale()
+	const { ref } = useSectionInView("Projects", 0.1);
+	const activeLocale = useLocale();
 
-  return (
-    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-      <SectionHeading>
-        {" "}
-        {activeLocale === "zh"
-          ? headerLanguageMap["Projects"]
-          : "Featured Projects"}
-      </SectionHeading>
-      <div>
-        {projectsData.map((project, index) => (
-          <React.Fragment key={index}>
-            <Project {...project} />
-          </React.Fragment>
-        ))}
-      </div>
-      <Link
-        className="group tracing-wide font-semibold hover:underline hover:underline-offset-4 hover:decoration-[#80bef9] text-slate-800 dark:text-slate-400 w-full flex gap-1 items-center justify-center mt-10"
-        target="_blank"
-        href="https://github.com/spongeYuqi"
-      >
-        View All Projects
-        <FaAngleRight className="group-hover:translate-x-2 transition" />
-      </Link>
-    </section>
-  )
+	return (
+		<section ref={ref} id="projects" className="scroll-mt-28 mb-28">
+			<SectionHeading>
+				{" "}
+				{activeLocale === "zh"
+					? headerLanguageMap["Projects"]
+					: "Featured Projects"}
+			</SectionHeading>
+			<div>
+				{projectsData.map((project, index) => (
+					<React.Fragment key={index}>
+						<Project {...project} />
+					</React.Fragment>
+				))}
+			</div>
+			<Link
+				className="group tracing-wide font-semibold hover:underline hover:underline-offset-4 hover:decoration-[#80bef9] text-slate-800 dark:text-slate-400 w-full flex gap-1 items-center justify-center mt-10"
+				target="_blank"
+				href="https://github.com/spongeYuqi"
+			>
+				View All Projects
+				<FaAngleRight className="group-hover:translate-x-2 transition" />
+			</Link>
+		</section>
+	);
 }
